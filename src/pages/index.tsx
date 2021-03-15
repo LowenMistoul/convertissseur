@@ -1,16 +1,15 @@
 import Head from 'next/head'
+import "antd/dist/antd.css";
 import Link from 'next/link'
 import React from 'react'
+import Convertisseur from '../components/convert'
+import Presentation from '../components/presentation';
 
 export default function Home() {
   return (
-    <div className="container">
-        <h1>  page 1 </h1>
-        <h1>
-          <Link href="page2"> 
-            <a>Aller a la page 2</a>
-          </Link>
-        </h1>
+    <div>
+        <Presentation />
+        <Convertisseur />
     </div>
   )
 }
