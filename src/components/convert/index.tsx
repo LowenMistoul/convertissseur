@@ -2,16 +2,24 @@ import React, { useState } from 'react'
 import "antd/dist/antd.css";
 import style from './convert.module.scss'
 import cn from 'classnames'
-import { Button, Col, Form, Input, InputNumber, Row } from 'antd'
+import { Button, Col, Form, Input, InputNumber, Row, Space } from 'antd'
 import Modal from 'antd/lib/modal/Modal';
 
 export default function Convertisseur(){
+    const regEx = new RegExp(/^[0-9]+$/)
     const [convertit , setConvertit] = useState('0');
     const [binaire , setBinaire] = useState('');
     const [decimal , setDecimal] = useState(0);
     const [isModalVisible2, setIsModalVisible2] = useState(false);
     const [isModalVisible8, setIsModalVisible8] = useState(false);
     const [isModalVisible16, setIsModalVisible16] = useState(false);
+
+    function reset(evt){
+        evt.target.value = null;
+        setConvertit('');
+        setBinaire('');
+        setDecimal(0);
+    }
 
     function inversion(value:string){
          var inverse : string= '';
@@ -41,10 +49,12 @@ export default function Convertisseur(){
         return fin;
     }
 
-    function onChange(value) {
+    function onChange(evt) {
+        var value :number = (evt.target.validity.valid) ? evt.target.value : convertit;
         var fin : string='' ;
         var base : number;
         var finReverse : string='' ;
+
         if(isModalVisible2 == true){
             base = 2;
         }else if (isModalVisible8 == true) {
@@ -154,25 +164,32 @@ export default function Convertisseur(){
                         onCancel = {()=>setIsModalVisible2(false)}
                     >
                         <h3 className={cn(style.modalText)}>Convertisseur de Base 10 en Base 2</h3>
-                        <h4 className={cn(style.modalText)}> Entrez le nombre que vous desirez convertir (base 10)</h4>
-                        <InputNumber  placeholder='0' onChange={onChange} />
-                        <h3 className={cn(style.modalText)}>Résultat : {convertit} </h3>
-                        <br/>
-                        <br/>
-                        <h3 className={cn(style.modalText)}>Convertisseur de Base 2 en base 10</h3>
-                        <h4 className={cn(style.modalText)}> Entrez le nombre que vous desirez convertir (base 2)</h4>
-                        <h4>
-                        <input 
-                            className={cn(style.input)} 
-                            type="text" 
-                            pattern="[0-1]*" 
-                            onInput={handleChange.bind(this)} 
-                            value={binaire} 
-                            placeholder={'0'}
-                            />
-                        </h4>
-
-                        <h3 className={cn(style.modalText)}>Resultat: {decimal}</h3>
+                        <h4 className={cn(style.modalText)}> Entrez le nombre que vous desirez convertir </h4>
+                        <Space style={{marginLeft : '7rem'}} size={'large'} direction ={'horizontal'}>
+                            <Space direction={'vertical'}>
+                                <label> Base 10</label>
+                                <input 
+                                    type="text"
+                                    pattern="[0-9]*"
+                                    className={cn(style.input)} 
+                                    onInput={onChange.bind(this)}
+                                    onBlur={reset.bind(this)}
+                                    placeholder={''+decimal}
+                                />
+                            </Space>
+                            <p style={{paddingTop :'2.5rem'}}>=</p>
+                            <Space direction={'vertical'}>
+                                <label>base 2</label>
+                                <input                             
+                                    type="text" 
+                                    pattern="[0-9]*" 
+                                    className={cn(style.input)}
+                                    onChange={handleChange.bind(this)} 
+                                    onBlur={reset.bind(this)}
+                                    placeholder={convertit}  
+                                />
+                            </Space>
+                        </Space>
                     </Modal>
                 </Col>
                 <Col className={cn(style.div)}>
@@ -187,25 +204,32 @@ export default function Convertisseur(){
                         onCancel = {()=>setIsModalVisible8(false)}
                     >
                         <h3 className={cn(style.modalText)}>Convertisseur de Base 10 en Base 8</h3>
-                        <h4 className={cn(style.modalText)}> Entrez le nombre que vous desirez convertir (base 10)</h4>
-                        <InputNumber  placeholder='0' onChange={onChange} />
-                        <h3 className={cn(style.modalText)}>Résultat : {convertit} </h3>
-                        <br/>
-                        <br/>
-                        <h3 className={cn(style.modalText)}>Convertisseur de Base 8 en base 10</h3>
-                        <h4 className={cn(style.modalText)}> Entrez le nombre que vous desirez convertir (base 8)</h4>
-                        <h4>
-                        <input 
-                            className={cn(style.input)} 
-                            type="text" 
-                            pattern="[0-9]*" 
-                            onInput={handleChange8.bind(this)} 
-                            value={binaire} 
-                            placeholder={'0'}
-                            />
-                        </h4>
-
-                        <h3 className={cn(style.modalText)}>Resultat: {decimal}</h3>
+                        <h4 className={cn(style.modalText)}> Entrez le nombre que vous desirez convertir</h4>
+                        <Space style={{marginLeft : '7rem'}} size={'large'} direction ={'horizontal'}>
+                            <Space direction={'vertical'}>
+                                <label> Base 10</label>
+                                <input 
+                                    type="text"
+                                    pattern="[0-9]*"
+                                    className={cn(style.input)} 
+                                    onInput={onChange.bind(this)}
+                                    onBlur={reset.bind(this)}
+                                    placeholder={''+decimal}
+                                />
+                            </Space>
+                            <p style={{paddingTop :'2.5rem'}}>=</p>
+                            <Space direction={'vertical'}>
+                                <label>base 8</label>
+                                <input                             
+                                    type="text" 
+                                    pattern="[0-9]*" 
+                                    className={cn(style.input)}
+                                    onChange={handleChange8.bind(this)} 
+                                    onBlur={reset.bind(this)}
+                                    placeholder={convertit}  
+                                />
+                            </Space>
+                        </Space>
                     </Modal>
                 </Col>
                 <Col className={cn(style.div)}>
@@ -220,25 +244,33 @@ export default function Convertisseur(){
                         onCancel = {()=>setIsModalVisible16(false)}
                     >
                         <h3 className={cn(style.modalText)}>Convertisseur de Base 10 en Base 16</h3>
-                        <h4 className={cn(style.modalText)}> Entrez le nombre que vous desirez convertir (base 10)</h4>
-                        <InputNumber  placeholder='0' onChange={onChange} />
-                        <h3 className={cn(style.modalText)}>Résultat : {convertit} </h3>
-                        <br/>
-                        <br/>
-                        <h3 className={cn(style.modalText)}>Convertisseur de Base 16 en base 10</h3>
-                        <h4 className={cn(style.modalText)}> Entrez le nombre que vous desirez convertir (base 16)</h4>
-                        <h4>
-                        <input 
-                            className={cn(style.input)} 
-                            type="text" 
-                            pattern="[0-9]*+[A-F]*" 
-                            onInput={handleChange16.bind(this)} 
-                            value={binaire} 
-                            placeholder={'0'}
-                            />
-                        </h4>
-
-                        <h3 className={cn(style.modalText)}>Resultat: {decimal}</h3>
+                        <h4 className={cn(style.modalText)}> Entrez le nombre que vous desirez convertir</h4>
+                        <Space style={{marginLeft : '7rem'}} size={'large'} direction ={'horizontal'}>
+                            <Space direction={'vertical'}>
+                                <label> Base 10</label>
+                                <input 
+                                    type="text"
+                                    pattern="[0-9]*"
+                                    className={cn(style.input)} 
+                                    onInput={onChange.bind(this)}
+                                    onBlur={reset.bind(this)}
+                                    placeholder={''+decimal}
+                                />
+                            </Space>
+                            <p style={{paddingTop :'2.5rem'}}>=</p>
+                            <Space direction={'vertical'}>
+                                <label>base 16</label>
+                                <input                             
+                                    type="text" 
+                                    pattern="[0-9]*+[A-F]*" 
+                                    className={cn(style.input)}
+                                    onChange={handleChange16.bind(this)} 
+                                    onBlur={reset.bind(this)}
+                                    placeholder={convertit}  
+                                />
+                            </Space>
+                        </Space>
+  
                     </Modal>
                 </Col>
             </Row>
