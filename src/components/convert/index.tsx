@@ -4,6 +4,7 @@ import style from './convert.module.scss'
 import cn from 'classnames'
 import { Button, Col, Form, Input, InputNumber, Row, Space } from 'antd'
 import Modal from 'antd/lib/modal/Modal';
+import ModalConvert from '../modal';
 
 export default function Convertisseur(){
     const regEx = new RegExp(/^[0-9]+$/)
@@ -159,38 +160,16 @@ export default function Convertisseur(){
                     >
                          <p>BASE 2</p>
                     </div>
-                    <Modal 
+                    <ModalConvert 
                         visible={isModalVisible2}
-                        onCancel = {()=>setIsModalVisible2(false)}
-                    >
-                        <h3 className={cn(style.modalText)}>Convertisseur de Base 10 en Base 2</h3>
-                        <h4 className={cn(style.modalText)}> Entrez le nombre que vous desirez convertir </h4>
-                        <Space style={{marginLeft : '25%'}} size={'large'} direction ={'horizontal'}>
-                            <Space direction={'vertical'}>
-                                <label> Base 10</label>
-                                <input 
-                                    type="text"
-                                    pattern="[0-9]*"
-                                    className={cn(style.input)} 
-                                    onInput={onChange.bind(this)}
-                                    onBlur={reset.bind(this)}
-                                    placeholder={''+decimal}
-                                />
-                            </Space>
-                            <p style={{paddingTop :'2.5rem'}}>=</p>
-                            <Space direction={'vertical'}>
-                                <label>base 2</label>
-                                <input                             
-                                    type="text" 
-                                    pattern="[0-9]*" 
-                                    className={cn(style.input)}
-                                    onChange={handleChange.bind(this)} 
-                                    onBlur={reset.bind(this)}
-                                    placeholder={convertit}  
-                                />
-                            </Space>
-                        </Space>
-                    </Modal>
+                        onCancel={()=>setIsModalVisible2(false)} 
+                        base={'2'}
+                        onInput={onChange.bind(this)}
+                        onChange={handleChange.bind(this)}
+                        onBlur={reset.bind(this)} 
+                        placeholder={''+decimal}
+                        placeholder2={convertit}
+                    />
                 </Col>
                 <Col className={cn(style.div)}>
                     <div
@@ -199,38 +178,16 @@ export default function Convertisseur(){
                     >
                          <p>BASE 8</p>
                     </div>
-                    <Modal 
+                    <ModalConvert 
                         visible={isModalVisible8}
-                        onCancel = {()=>setIsModalVisible8(false)}
-                    >
-                        <h3 className={cn(style.modalText)}>Convertisseur de Base 10 en Base 8</h3>
-                        <h4 className={cn(style.modalText)}> Entrez le nombre que vous desirez convertir</h4>
-                        <Space style={{marginLeft : '25%'}}  size={'large'} direction ={'horizontal'}>
-                            <Space direction={'vertical'}>
-                                <label> Base 10</label>
-                                <input 
-                                    type="text"
-                                    pattern="[0-9]*"
-                                    className={cn(style.input)} 
-                                    onInput={onChange.bind(this)}
-                                    onBlur={reset.bind(this)}
-                                    placeholder={''+decimal}
-                                />
-                            </Space>
-                            <p style={{paddingTop :'2.5rem'}}>=</p>
-                            <Space direction={'vertical'}>
-                                <label>base 8</label>
-                                <input                             
-                                    type="text" 
-                                    pattern="[0-9]*" 
-                                    className={cn(style.input)}
-                                    onChange={handleChange8.bind(this)} 
-                                    onBlur={reset.bind(this)}
-                                    placeholder={convertit}  
-                                />
-                            </Space>
-                        </Space>
-                    </Modal>
+                        onCancel={()=>setIsModalVisible8(false)} 
+                        base={'8'}
+                        onInput={onChange.bind(this)}
+                        onChange={handleChange8.bind(this)}
+                        onBlur={reset.bind(this)} 
+                        placeholder={''+decimal}
+                        placeholder2={convertit}
+                    />
                 </Col>
                 <Col className={cn(style.div)}>
                     <div
@@ -239,39 +196,16 @@ export default function Convertisseur(){
                     >
                          <p>BASE 16</p>
                     </div>
-                    <Modal 
+                    <ModalConvert 
                         visible={isModalVisible16}
-                        onCancel = {()=>setIsModalVisible16(false)}
-                    >
-                        <h3 className={cn(style.modalText)}>Convertisseur de Base 10 en Base 16</h3>
-                        <h4 className={cn(style.modalText)}> Entrez le nombre que vous desirez convertir</h4>
-                        <Space style={{marginLeft : '25%'}}  size={'large'} direction ={'horizontal'}>
-                            <Space direction={'vertical'}>
-                                <label> Base 10</label>
-                                <input 
-                                    type="text"
-                                    pattern="[0-9]*"
-                                    className={cn(style.input)} 
-                                    onInput={onChange.bind(this)}
-                                    onBlur={reset.bind(this)}
-                                    placeholder={''+decimal}
-                                />
-                            </Space>
-                            <p style={{paddingTop :'2.5rem'}}>=</p>
-                            <Space direction={'vertical'}>
-                                <label>base 16</label>
-                                <input                             
-                                    type="text" 
-                                    pattern="[0-9]*+[A-F]*" 
-                                    className={cn(style.input)}
-                                    onChange={handleChange16.bind(this)} 
-                                    onBlur={reset.bind(this)}
-                                    placeholder={convertit}  
-                                />
-                            </Space>
-                        </Space>
-  
-                    </Modal>
+                        onCancel={()=>setIsModalVisible16(false)} 
+                        base={'16'}
+                        onInput={onChange.bind(this)}
+                        onChange={handleChange16.bind(this)}
+                        onBlur={reset.bind(this)} 
+                        placeholder={''+decimal}
+                        placeholder2={convertit}
+                    />
                 </Col>
             </Row>
         </div>
