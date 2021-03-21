@@ -165,7 +165,7 @@ export default function Convertisseur(){
                     >
                         <h3 className={cn(style.modalText)}>Convertisseur de Base 10 en Base 2</h3>
                         <h4 className={cn(style.modalText)}> Entrez le nombre que vous desirez convertir </h4>
-                        <Space style={{marginLeft : '7rem'}} size={'large'} direction ={'horizontal'}>
+                        <Space style={{marginLeft : '25%'}} size={'large'} direction ={'horizontal'}>
                             <Space direction={'vertical'}>
                                 <label> Base 10</label>
                                 <input 
@@ -205,7 +205,7 @@ export default function Convertisseur(){
                     >
                         <h3 className={cn(style.modalText)}>Convertisseur de Base 10 en Base 8</h3>
                         <h4 className={cn(style.modalText)}> Entrez le nombre que vous desirez convertir</h4>
-                        <Space style={{marginLeft : '7rem'}} size={'large'} direction ={'horizontal'}>
+                        <Space style={{marginLeft : '25%'}}  size={'large'} direction ={'horizontal'}>
                             <Space direction={'vertical'}>
                                 <label> Base 10</label>
                                 <input 
@@ -245,7 +245,7 @@ export default function Convertisseur(){
                     >
                         <h3 className={cn(style.modalText)}>Convertisseur de Base 10 en Base 16</h3>
                         <h4 className={cn(style.modalText)}> Entrez le nombre que vous desirez convertir</h4>
-                        <Space style={{marginLeft : '7rem'}} size={'large'} direction ={'horizontal'}>
+                        <Space style={{marginLeft : '25%'}}  size={'large'} direction ={'horizontal'}>
                             <Space direction={'vertical'}>
                                 <label> Base 10</label>
                                 <input 
