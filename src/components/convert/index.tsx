@@ -144,7 +144,7 @@ export default function Convertisseur(){
             <Row >
                 <Col className={cn(style.div)}>
                     <div
-                        className={cn(style.carre)}
+                        className={cn(style.base)}
                         onClick = {()=>setIsModalVisible2(true)}
                     >
                          <p>BASE 2</p>
@@ -153,14 +153,14 @@ export default function Convertisseur(){
                         visible={isModalVisible2}
                         onCancel = {()=>setIsModalVisible2(false)}
                     >
-                        <h3>Convertisseur de Base 10 en Base 2</h3>
-                        <h4> Entrez le nombre que vous desirez convertir (base 10)</h4>
+                        <h3 className={cn(style.modalText)}>Convertisseur de Base 10 en Base 2</h3>
+                        <h4 className={cn(style.modalText)}> Entrez le nombre que vous desirez convertir (base 10)</h4>
                         <InputNumber  placeholder='0' onChange={onChange} />
-                        <h3>Résultat : {convertit} </h3>
+                        <h3 className={cn(style.modalText)}>Résultat : {convertit} </h3>
                         <br/>
                         <br/>
-                        <h3>Convertisseur de Base 2 en base 10</h3>
-                        <h4> Entrez le nombre que vous desirez convertir (base 2)</h4>
+                        <h3 className={cn(style.modalText)}>Convertisseur de Base 2 en base 10</h3>
+                        <h4 className={cn(style.modalText)}> Entrez le nombre que vous desirez convertir (base 2)</h4>
                         <h4>
                         <input 
                             className={cn(style.input)} 
@@ -172,12 +172,12 @@ export default function Convertisseur(){
                             />
                         </h4>
 
-                        <h3>Resultat: {decimal}</h3>
+                        <h3 className={cn(style.modalText)}>Resultat: {decimal}</h3>
                     </Modal>
                 </Col>
                 <Col className={cn(style.div)}>
                     <div
-                        className={cn(style.carre)}
+                        className={cn(style.base)}
                         onClick = {()=>setIsModalVisible8(true)}
                     >
                          <p>BASE 8</p>
@@ -186,14 +186,14 @@ export default function Convertisseur(){
                         visible={isModalVisible8}
                         onCancel = {()=>setIsModalVisible8(false)}
                     >
-                        <h3>Convertisseur de Base 10 en Base 8</h3>
-                        <h4> Entrez le nombre que vous desirez convertir (base 10)</h4>
+                        <h3 className={cn(style.modalText)}>Convertisseur de Base 10 en Base 8</h3>
+                        <h4 className={cn(style.modalText)}> Entrez le nombre que vous desirez convertir (base 10)</h4>
                         <InputNumber  placeholder='0' onChange={onChange} />
-                        <h3>Résultat : {convertit} </h3>
+                        <h3 className={cn(style.modalText)}>Résultat : {convertit} </h3>
                         <br/>
                         <br/>
-                        <h3>Convertisseur de Base 8 en base 10</h3>
-                        <h4> Entrez le nombre que vous desirez convertir (base 8)</h4>
+                        <h3 className={cn(style.modalText)}>Convertisseur de Base 8 en base 10</h3>
+                        <h4 className={cn(style.modalText)}> Entrez le nombre que vous desirez convertir (base 8)</h4>
                         <h4>
                         <input 
                             className={cn(style.input)} 
@@ -205,12 +205,12 @@ export default function Convertisseur(){
                             />
                         </h4>
 
-                        <h3>Resultat: {decimal}</h3>
+                        <h3 className={cn(style.modalText)}>Resultat: {decimal}</h3>
                     </Modal>
                 </Col>
                 <Col className={cn(style.div)}>
                     <div
-                        className={cn(style.carre)}
+                        className={cn(style.base)}
                         onClick = {()=>setIsModalVisible16(true)}
                     >
                          <p>BASE 16</p>
@@ -219,14 +219,14 @@ export default function Convertisseur(){
                         visible={isModalVisible16}
                         onCancel = {()=>setIsModalVisible16(false)}
                     >
-                        <h3>Convertisseur de Base 10 en Base 16</h3>
-                        <h4> Entrez le nombre que vous desirez convertir (base 10)</h4>
+                        <h3 className={cn(style.modalText)}>Convertisseur de Base 10 en Base 16</h3>
+                        <h4 className={cn(style.modalText)}> Entrez le nombre que vous desirez convertir (base 10)</h4>
                         <InputNumber  placeholder='0' onChange={onChange} />
-                        <h3>Résultat : {convertit} </h3>
+                        <h3 className={cn(style.modalText)}>Résultat : {convertit} </h3>
                         <br/>
                         <br/>
-                        <h3>Convertisseur de Base 16 en base 10</h3>
-                        <h4> Entrez le nombre que vous desirez convertir (base 16)</h4>
+                        <h3 className={cn(style.modalText)}>Convertisseur de Base 16 en base 10</h3>
+                        <h4 className={cn(style.modalText)}> Entrez le nombre que vous desirez convertir (base 16)</h4>
                         <h4>
                         <input 
                             className={cn(style.input)} 
@@ -238,7 +238,7 @@ export default function Convertisseur(){
                             />
                         </h4>
 
-                        <h3>Resultat: {decimal}</h3>
+                        <h3 className={cn(style.modalText)}>Resultat: {decimal}</h3>
                     </Modal>
                 </Col>
             </Row>

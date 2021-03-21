@@ -19,7 +19,9 @@
     align-items: center;
 }
 
-.carre{
+.base{
+    max-width: 80%;
+    margin: 0 auto;
     text-align: center;
     font-size: 8.5rem;
     color:white;
@@ -41,17 +43,26 @@
     transition-duration: 0.8s;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 762px) {
     .div{
-        width: 100%;
+        width: 80%;
         margin-bottom: 3rem;
-        height: 28rem;
-        //margin : 0 auto
+        height: 35rem;
+       
     }
-    .carre{
-        font-size: 9rem;
+    .base{
+        font-size: 11rem;
     }
     .input{
         padding-left: 0rem;
     }
   }
+
+  @media screen and (max-width: 600px) {
+      .base{font-size: 20vw;}
+      .div{height: fit-content;}
+  }
+
+  @media screen and (max-width: 440px) {
+    .modalText{font-size: 3vw;}
+}
