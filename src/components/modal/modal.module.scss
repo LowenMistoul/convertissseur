@@ -13,11 +13,16 @@
     border-color: rgb(99, 172, 255);
     outline: none;
 }
-
+.space{
+    margin-left: 25%;
+}
 
 @media screen and (max-width: 762px) {
     .input{
         padding-left: 0rem;
+    }
+    .space{
+        margin-left: 12.5%;
     }
 }
 

@@ -33,7 +33,7 @@ interface ModalConvertProps {
     >
         <h3 className={cn(style.modalText)}>Convertisseur de Base 10 en Base {base}</h3>
         <h4 className={cn(style.modalText)}> Entrez le nombre que vous desirez convertir </h4>
-        <Space style={{marginLeft : '25%'}} size={'large'} direction ={'horizontal'}>
+        <Space className={cn(style.space)}size={'large'} direction ={'horizontal'}>
             <Space direction={'vertical'}>
                 <label> Base 10</label>
                 <input 
