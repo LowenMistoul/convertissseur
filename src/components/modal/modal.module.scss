@@ -2,7 +2,7 @@
     border: solid rgb(219, 219, 219) 1px;
     height: 2.2rem;
     color : black;
-    padding-left: 0.8rem;
+    padding-left: 0.5rem;
     width: 6rem;
 }
 .input:hover{
@@ -19,13 +19,16 @@
 
 @media screen and (max-width: 762px) {
     .input{
-        padding-left: 0rem;
+        padding-left: 0.5rem;
     }
     .space{
-        margin-left: 12.5%;
+        margin-left: 15%;
     }
 }
 
 @media screen and (max-width: 440px) {
     .modalText{font-size: 3vw;}
+    .space{
+        margin-left: 6.25%;
+    }
 }
