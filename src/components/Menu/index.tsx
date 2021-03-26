@@ -19,6 +19,11 @@ const menu = (
           Chronometre
         </a>
       </Menu.Item>
+      <Menu.Item>
+        <a rel="noopener noreferrer" href="/timer">
+          Minuteur
+        </a>
+      </Menu.Item>
       <Menu.Item disabled>
         <a target="_blank" rel="noopener noreferrer" href="https://www.luohanacademy.com">
           Calculatrice
