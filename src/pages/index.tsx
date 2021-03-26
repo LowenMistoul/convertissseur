@@ -6,6 +6,7 @@ import Convertisseur from '../components/convert'
 import Presentation from '../components/presentation';
 import MenuFlottant from '../components/Menu';
 import Stopwatch from '../components/stopwatch';
+import Timer from '../components/Timer';
 
 export default function Home() {
   return (

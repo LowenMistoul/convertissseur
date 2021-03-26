@@ -105,13 +105,13 @@ export default function Stopwatch(){
         return number;
     }
 
-    function reformatter(current : number){
+    /*function reformatter(current : number){
         var string = current.toString();
         var newstring;
         while(string.length <9){
             string = '0' + string;
         }
-    }
+    }*/
 
     return(
         <>

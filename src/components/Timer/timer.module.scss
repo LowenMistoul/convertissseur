@@ -1,0 +1,88 @@
+.form{
+    text-align: center;
+    font-size: 3.5rem;
+}
+.isHidden{
+    display: none;
+}
+
+.p{
+    padding-bottom: 5rem;
+    margin-left: -15%;
+}
+
+.select{
+    width: 5rem;
+    height: 200px;
+    font-size: 40px;
+}
+
+.dropdown{
+    width: 3rem;
+}
+
+.divButton{
+    margin: 0 auto;
+    padding-left: 10rem;
+    padding-right: 10rem;
+}
+
+.timer{
+    text-align: center;
+    font-weight: bolder;
+}
+
+.play{
+    width: 300px;
+    height: 300px;
+    padding-bottom: 3%;
+    float: right;
+    background: rgb(29, 94, 29);
+    color: rgb(67, 206, 67); 
+    font-size: 1000%;
+}
+
+.play2{
+    width: 300px;
+    height: 300px;
+    padding-bottom: 3%;
+    float: left;
+    background: rgb(99, 99, 99);
+    color: rgb(219, 219, 219); 
+    font-size: 1000%;
+}
+
+@media screen and (max-width : 1000px){
+    .play , .play2 {
+        float: none;
+    }
+    .divButton{
+        margin-top: -10%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .form{
+        font-size: 4vw;
+    }
+    .timer{
+        font-size: 4vw;
+        margin-bottom: 5rem;
+        margin-top: -2rem;
+    }
+    .select{
+        font-size: 4vw;
+    }
+    .p{
+        padding-bottom: 8.5rem;
+    }
+}
+
+@media screen and (max-width : 900px){
+    .play , .play2{
+        width: 30vw;
+        height: 25vw;
+        font-size: 5vw;
+        float: none;
+    }
+}
