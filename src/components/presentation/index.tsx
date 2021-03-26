@@ -4,13 +4,22 @@ import Typography from'antd'
 import cn from 'classnames'
 import style from './presentation.module.scss'
 
+interface PresentationProps{
+    title : String;
+    subtitle? : String;
+}
 
 
-export default function Presentation(){
+export default function Presentation({
+    title,
+    subtitle
+}:PresentationProps){
     return(
+
         <div className={cn(style.container)}>
-            <h1 className={cn(style.titre)}> CONVERTISSEUR DE BASES ARITHMETIQUES </h1>
-            <h2 className={cn(style.sousTitre)}>Vous pouvez Selectionner la conversion :</h2>
+            <div className={cn(style.bg)} />
+            <h1 className={cn(style.titre)}>{title}</h1>
+            <h2 className={cn(style.sousTitre)}>{subtitle}</h2>
         </div>
     )
 }
