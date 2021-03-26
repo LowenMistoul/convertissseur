@@ -14,8 +14,8 @@ const menu = (
           Convertisseur base
         </a>
       </Menu.Item>
-      <Menu.Item  disabled>
-        <a target="_blank" rel="noopener noreferrer" href="https://www.aliyun.com">
+      <Menu.Item>
+        <a rel="noopener noreferrer" href="/stopwatch">
           Chronometre
         </a>
       </Menu.Item>

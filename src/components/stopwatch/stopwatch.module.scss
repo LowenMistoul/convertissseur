@@ -1,0 +1,123 @@
+.time{
+    font-size: 1500%;
+    text-align: center;
+    margin-bottom: 0%;
+    margin-top: -9%;
+}
+
+.div{
+    margin-top: -2%;
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
+
+.play{
+    width: 400px;
+    height: 400px;
+    padding-bottom: 3%;
+    float: right;
+    background: rgb(29, 94, 29);
+    color: rgb(67, 206, 67); 
+    font-size: 1000%;
+}
+
+.play:hover{
+    background: rgb(45, 146, 50);
+    color: rgb(88, 255, 82); 
+}
+
+.stop{
+    width: 400px;
+    height: 400px;
+    padding-bottom: 3%;
+    float: right;
+    background: rgb(179, 22, 22);
+    color: rgb(206, 67, 67); 
+    font-size: 1000%;
+}
+
+.stop:hover{
+    background: rgb(212, 26, 26);
+    color: rgb(241, 78, 78);
+}
+
+
+
+.note{
+    width: 400px;
+    height: 400px;
+    padding-bottom: 3%;
+    float: left;
+    background: rgb(99, 98, 98);
+    color: rgb(255, 255, 255);
+    font-size: 1000%;
+}
+
+.note:hover{
+    background: rgb(129, 129, 129);
+    color: rgb(255, 255, 255);
+}
+
+.reset{
+    width: 400px;
+    height: 400px;
+    padding-bottom: 3%;
+    float: left;
+    background: rgb(126, 125, 125);
+    color: rgb(255, 255, 255);
+    font-size: 1000%;
+}
+
+.reset:hover{   
+    background: rgb(156, 156, 156);
+    color: rgb(255, 255, 255);
+}
+
+
+.table{
+    margin-top: 10rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.tr{
+    margin-bottom: 3rem;
+    color: black;
+    height: 5rem;
+    font-weight: bolder;
+    font-size: 200%;
+}
+
+@media screen and (max-width : 1280px){
+    .time{
+        font-size: 15vw; 
+    }
+    .tr{
+        font-size: 5vw;
+    }
+}
+
+@media screen and (max-width : 1000px){
+    .play , .stop , .note , .reset{
+       // width: 40vw;
+        //height: 25vw;
+       // font-size: 5vw;
+        float: none;
+        //text-align: center;
+    }
+    .div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width : 900px){
+    .play , .stop , .note , .reset{
+        width: 30vw;
+        height: 25vw;
+        font-size: 5vw;
+        float: none;
+        //text-align: center;
+    }
+}
