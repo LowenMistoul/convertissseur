@@ -10,6 +10,8 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: auto;
+    width: 100%;
+    height: 600px;
   }
 
 .sousTitre{
@@ -18,13 +20,23 @@
     padding-bottom: 5rem;
 }
 
+
+@media screen and (max-width : 747px){
+    .bg{
+        background-size: 600px 400px;
+        height: 400px;
+    }
+}
+
+@media screen and (max-width : 445px){
+    .bg{
+        background-size: 500px 300px;
+        height: 300px;
+    }
+}
+
 @media screen and (max-width : 400px){
     .titre ,.sousTitre{
         font-size: 10vw;
-    }
-}
-@media screen and (max-width : 747px){
-    .bg{
-        background-size: 600px 600px;
     }
 }
