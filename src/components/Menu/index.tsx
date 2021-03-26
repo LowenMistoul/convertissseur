@@ -47,7 +47,7 @@ export default function MenuFlottant(){
         <>
             <a href='/'>
               <Button className={cn(style.accueil)}type="primary" shape="round" icon={<HomeOutlined/>} >
-                  Acceuil
+                  Accueil
               </Button>
             </a>
             <Dropdown visible={classActive} overlay={menu} trigger={["click"]}>
