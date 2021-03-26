@@ -23,6 +23,7 @@
 
 @media screen and (max-width : 747px){
     .bg{
+        background-position-y: 10px ;
         background-size: 600px 400px;
         height: 400px;
     }
@@ -30,8 +31,9 @@
 
 @media screen and (max-width : 445px){
     .bg{
+        background-position-y: 30px ;
         background-size: 500px 300px;
-        height: 300px;
+        height: 330px;
     }
 }
 
